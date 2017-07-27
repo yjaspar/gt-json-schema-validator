@@ -1,0 +1,37 @@
+<div class="row">
+  {{#if isLoaded}}
+    <div class="col-lg-12">
+      <h2>Query Generator</h2>
+      <form>
+        <div class="form-group">
+          <label for="exampleSelect1">Verb</label>
+          <select class="custom-select form-control" onchange={{action (mut apiVerb) value="target.value"}}>
+            <option value="GET">GET</option>
+            <option value="POST">POST</option>
+            <option value="PUT">PUT</option>
+            <option value="DELETE">DELETE</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="exampleSelect1">Action</label>
+          <select class="custom-select form-control" onchange={{action (mut apiAction) value="target.value"}}>
+            {{#each availableActions as |key|}}
+              <option value={{key}}>{{key}}</option>
+            {{/each}}
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-control-label">URL</label>
+          {{input value=(mut apiURL) class='form-control'}}
+        </div>
+        <p>
+          <button type="submit" {{action 'validateSchema'}}>Validate</button>
+        </p>
+      </form>
+    </div>
+  {{else}}
+    <div class="alert alert-info">
+      <i class="fa fa-spinner fa-spin"></i> Loading ...
+    </div>
+  {{/if}}
+</div>

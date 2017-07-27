@@ -1,0 +1,6 @@
+{
+  "name": "developer",
+  "dependencies": {
+    "jsoneditor": "^5.9.2"
+  }
+}

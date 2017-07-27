@@ -15,8 +15,12 @@
     "test": "ember test"
   },
   "devDependencies": {
+    "ajv": "^5.2.2",
+    "bootstrap": "^4.0.0-alpha.6",
     "broccoli-asset-rev": "^2.4.5",
     "ember-ajax": "^3.0.0",
+    "ember-bootstrap": "^1.0.0-beta.2",
+    "ember-browserify": "^1.2.0",
     "ember-cli": "~2.14.0",
     "ember-cli-app-version": "^3.0.0",
     "ember-cli-babel": "^6.3.0",
